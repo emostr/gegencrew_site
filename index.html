@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEGENCREW - Смелый PR для смелых компаний</title>
+  <meta name="description"
+    content="GEGENCREW - PR-агентство смелых коммуникаций. PR и SMM под ключ, запуск кампаний, репутационный консалтинг. Сделаем так, чтобы Вас поняли правильно." />
+  <meta name="keywords"
+    content="PR агентство, SMM, пиар, PR кампания, репутационный менеджмент, антикризисный PR, коммуникации, GEGENCREW" />
+  <meta name="author" content="GEGENCREW" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gegencrew.ru/" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gegencrew.ru/" />
+  <meta property="og:title" content="GEGENCREW - Смелый PR для смелых компаний" />
+  <meta property="og:description"
+    content="PR-агентство смелых коммуникаций. PR и SMM под ключ, запуск кампаний, репутационный консалтинг." />
+  <meta property="og:locale" content="ru_RU" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GEGENCREW - Смелый PR для смелых компаний" />
+  <meta name="twitter:description"
+    content="PR-агентство смелых коммуникаций. PR и SMM под ключ, запуск кампаний, репутационный консалтинг." />
+  <style>
+    @font-face {
+      font-family: 'DepotTraphar';
+      src: url('assets/fonts/2D-Typo-DepotTraphar.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #F7F7F5;
+      --bg-white: #FFFFFF;
+      --text: #1A1A1A;
+      --green: #2A6B2A;
+      --red: #C41E1E;
+      --mustard: #E8A020;
+      --mustard-dark: #C8880A;
+      --gray-light: #EBEBEB;
+      --gray-mid: #999999;
+      --section-padding: 100px 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-element:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    .fade-in-element:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .fade-in-element:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--bg-white);
+      box-shadow: 0 1px 0 var(--gray-light);
+      padding: 20px 0;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .header.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'DepotTraphar', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+
+    .logo__gegen {
+      color: var(--green);
+    }
+
+    .logo__crew {
+      color: var(--red);
+    }
+
+    .nav__list {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav__link {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width 0.25s ease;
+    }
+
+    .nav__link:hover {
+      color: var(--green);
+    }
+
+    .nav__link:hover::after {
+      width: 100%;
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .burger__line {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--text);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .burger.open .burger__line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger.open .burger__line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open .burger__line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav--mobile {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-white);
+      border-top: 1px solid var(--gray-light);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav--mobile.open {
+      display: block;
+    }
+
+    .nav--mobile .nav__list {
+      flex-direction: column;
+      gap: 0;
+      padding: 16px 0;
+    }
+
+    .nav--mobile .nav__link {
+      display: block;
+      padding: 14px 24px;
+      font-size: 16px;
+    }
+
+    .nav--mobile .nav__link::after {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .nav--desktop {
+        display: none;
+      }
+
+      .burger {
+        display: flex;
+      }
+    }
+
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 0;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 80px;
+    }
+
+    .hero__badge {
+      display: inline-block;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      border: 1.5px solid var(--green);
+      padding: 6px 14px;
+      margin-bottom: 32px;
+    }
+
+    .hero__title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: clamp(56px, 8vw, 100px);
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .hero__subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--gray-mid);
+      margin-bottom: 48px;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn--mustard {
+      background: var(--mustard);
+      color: var(--text);
+    }
+
+    .btn--mustard:hover {
+      background: var(--mustard-dark);
+    }
+
+    .btn--mustard-full {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    .marquee {
+      background: var(--mustard);
+      overflow: hidden;
+      padding: 14px 0;
+      white-space: nowrap;
+    }
+
+    .marquee__track {
+      display: inline-flex;
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee__text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      color: #fff;
+      padding-right: 80px;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .section {
+      padding: var(--section-padding);
+    }
+
+    .section--gray {
+      background: var(--gray-light);
+    }
+
+    .section__title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      letter-spacing: 0.03em;
+      margin-bottom: 56px;
+    }
+
+    .section__title--green {
+      color: var(--green);
+    }
+
+    .section__title--red {
+      color: var(--red);
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 1023px) {
+      .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .services__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-white);
+      padding: 36px 32px;
+      border-top: 3px solid var(--green);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      transition: border-color 0.3s ease;
+    }
+
+    .card:hover {
+      border-top-color: var(--red);
+    }
+
+    .card__icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .card__title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 26px;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .card__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card__list li {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.5;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .card__list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gray-mid);
+      font-size: 12px;
+      top: 1px;
+    }
+
+    .about {
+      background: var(--bg-white);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 767px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat__number {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: clamp(56px, 6vw, 80px);
+      color: var(--red);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat__suffix {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: clamp(40px, 4vw, 56px);
+      color: var(--red);
+    }
+
+    .stat__label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-mid);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      display: block;
+    }
+
+    .about__description {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .clients {
+      overflow: hidden;
+    }
+
+    .clients__track-wrapper {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+
+    .clients__track {
+      display: inline-flex;
+      gap: 28px;
+      animation: clients-scroll 28s linear infinite;
+    }
+
+    .clients__track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes clients-scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .client-logo {
+      flex-shrink: 0;
+      width: 180px;
+      height: 90px;
+      background: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .client-logo img {
+      max-width: 130px;
+      max-height: 60px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    .client-logo:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .contacts {
+      background: var(--bg-white);
+    }
+
+    .contacts__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 767px) {
+      .contacts__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .contacts__subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      color: var(--gray-mid);
+      margin-top: -40px;
+      margin-bottom: 40px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .form__field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form__label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+    }
+
+    .form__input {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--gray-light);
+      border-radius: 0;
+      outline: none;
+      padding: 10px 0;
+      transition: border-color 0.25s ease;
+      width: 100%;
+    }
+
+    .form__input::placeholder {
+      color: var(--gray-light);
+    }
+
+    .form__input:focus {
+      border-bottom-color: var(--green);
+    }
+
+    .contacts__info {
+      padding-top: 8px;
+    }
+
+    .contacts__info-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 28px;
+      color: var(--text);
+      margin-bottom: 32px;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item__icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item__icon img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .contact-item__text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .footer {
+      background: var(--text);
+      padding: 40px 0;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 767px) {
+      .footer__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+    }
+
+    .footer__logo .logo__gegen {
+      color: var(--green);
+    }
+
+    .footer__logo .logo__crew {
+      color: var(--red);
+    }
+
+    .footer__copy {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 13px;
+      color: var(--gray-mid);
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer__social-link {
+      color: var(--gray-mid);
+      display: flex;
+      align-items: center;
+      transition: color 0.2s ease;
+    }
+
+    .footer__social-link img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      filter: invert(1);
+    }
+
+    .footer__social-link:hover {
+      color: var(--bg-white);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <a href="#" class="logo" aria-label="GEGENCREW — на главную">
+          <span class="logo__gegen">GEGEN</span><span class="logo__crew">CREW</span>
+        </a>
+
+        <nav class="nav nav--desktop" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li><a href="#services" class="nav__link">Услуги</a></li>
+            <li><a href="#about" class="nav__link">О нас</a></li>
+            <li><a href="#clients" class="nav__link">Клиенты</a></li>
+            <li><a href="#contacts" class="nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+      </div>
+
+      <nav class="nav nav--mobile" id="mobileNav" aria-label="Мобильная навигация">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#about" class="nav__link">О нас</a></li>
+          <li><a href="#clients" class="nav__link">Клиенты</a></li>
+          <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero__inner">
+        <span class="hero__badge fade-in-element">PR · SMM · КОНСАЛТИНГ</span>
+        <h1 class="hero__title fade-in-element">СМЕЛЫЙ PR ДЛЯ СМЕЛЫХ КОМПАНИЙ</h1>
+        <p class="hero__subtitle fade-in-element">Сделаем так, чтобы Вас поняли правильно</p>
+        <a href="#contacts" class="btn btn--mustard fade-in-element">Обсудить проект</a>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__text">КРЕАТИВНО&nbsp;•&nbsp;ДЕРЗКО&nbsp;•&nbsp;ЭФФЕКТИВНО&nbsp;•&nbsp;СОЗДАЁМ ЯРКИЕ
+          БРЕНДЫ&nbsp;•&nbsp;PR ДЛЯ ТЕХ КТО НЕ БОИТСЯ&nbsp;•&nbsp;</span>
+        <span class="marquee__text">КРЕАТИВНО&nbsp;•&nbsp;ДЕРЗКО&nbsp;•&nbsp;ЭФФЕКТИВНО&nbsp;•&nbsp;СОЗДАЁМ ЯРКИЕ
+          БРЕНДЫ&nbsp;•&nbsp;PR ДЛЯ ТЕХ КТО НЕ БОИТСЯ&nbsp;•&nbsp;</span>
+        <span class="marquee__text">КРЕАТИВНО&nbsp;•&nbsp;ДЕРЗКО&nbsp;•&nbsp;ЭФФЕКТИВНО&nbsp;•&nbsp;СОЗДАЁМ ЯРКИЕ
+          БРЕНДЫ&nbsp;•&nbsp;PR ДЛЯ ТЕХ КТО НЕ БОИТСЯ&nbsp;•&nbsp;</span>
+        <span class="marquee__text">КРЕАТИВНО&nbsp;•&nbsp;ДЕРЗКО&nbsp;•&nbsp;ЭФФЕКТИВНО&nbsp;•&nbsp;СОЗДАЁМ ЯРКИЕ
+          БРЕНДЫ&nbsp;•&nbsp;PR ДЛЯ ТЕХ КТО НЕ БОИТСЯ&nbsp;•&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section__title section__title--green fade-in-element">ЧТО МЫ УМЕЕМ</h2>
+
+      <div class="services__grid">
+
+        <article class="card fade-in-element">
+          <span class="card__icon" aria-hidden="true">📱</span>
+          <h3 class="card__title">PR и SMM «под ключ»</h3>
+          <ul class="card__list">
+            <li>Комплексная работа со СМИ и UGC-платформами</li>
+            <li>Разработка спецпроектов для СМИ и digital-платформ</li>
+            <li>Модерация соцсетей</li>
+            <li>Мониторинг отзывов и отработка негатива</li>
+            <li>Повышение вовлечённости и лояльности</li>
+          </ul>
+        </article>
+
+        <article class="card fade-in-element">
+          <span class="card__icon" aria-hidden="true">🚀</span>
+          <h3 class="card__title">Запуск PR-кампаний</h3>
+          <ul class="card__list">
+            <li>Создание креативных концепций</li>
+            <li>Интеграция бренда в события и культурные тренды</li>
+            <li>Разработка сценариев для PR-мероприятий</li>
+            <li>Сопровождение от идеи до оценки результатов</li>
+          </ul>
+        </article>
+
+        <article class="card fade-in-element">
+          <span class="card__icon" aria-hidden="true">💡</span>
+          <h3 class="card__title">Консалтинг</h3>
+          <ul class="card__list">
+            <li>Аудит внутренних и внешних коммуникаций</li>
+            <li>Разработка рекомендаций по коммуникационной политике</li>
+            <li>Поддержка в антикризисных ситуациях</li>
+            <li>Консультации по репутационному менеджменту</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section section--gray clients" id="clients">
+    <div class="container">
+      <h2 class="section__title section__title--green fade-in-element">С КЕМ МЫ РАБОТАЕМ</h2>
+    </div>
+
+    <div class="clients__track-wrapper">
+      <div class="clients__track" aria-label="Логотипы клиентов">
+        <div class="client-logo"><img src="assets/img/Avtodor.png" alt="Avtodor" /></div>
+        <div class="client-logo"><img src="assets/img/Barnes.png" alt="Barnes" /></div>
+        <div class="client-logo"><img src="assets/img/GLINCOM.png" alt="GLINCOM" /></div>
+        <div class="client-logo"><img src="assets/img/Kalinka.png" alt="Kalinka" /></div>
+        <div class="client-logo"><img src="assets/img/Mariya.png" alt="Mariya" /></div>
+        <div class="client-logo"><img src="assets/img/Opeka.png" alt="Opeka" /></div>
+        <div class="client-logo"><img src="assets/img/Point_Estate.png" alt="Point Estate" /></div>
+        <div class="client-logo"><img src="assets/img/Quattor.webp" alt="Quattor" /></div>
+        <div class="client-logo"><img src="assets/img/Sokol.png" alt="Sokol" /></div>
+        <div class="client-logo"><img src="assets/img/UNIQ.webp" alt="UNIQ" /></div>
+        <div class="client-logo"><img src="assets/img/Avtodor.png" alt="Avtodor" /></div>
+        <div class="client-logo"><img src="assets/img/Barnes.png" alt="Barnes" /></div>
+        <div class="client-logo"><img src="assets/img/GLINCOM.png" alt="GLINCOM" /></div>
+        <div class="client-logo"><img src="assets/img/Kalinka.png" alt="Kalinka" /></div>
+        <div class="client-logo"><img src="assets/img/Mariya.png" alt="Mariya" /></div>
+        <div class="client-logo"><img src="assets/img/Opeka.png" alt="Opeka" /></div>
+        <div class="client-logo"><img src="assets/img/Point_Estate.png" alt="Point Estate" /></div>
+        <div class="client-logo"><img src="assets/img/Quattor.webp" alt="Quattor" /></div>
+        <div class="client-logo"><img src="assets/img/Sokol.png" alt="Sokol" /></div>
+        <div class="client-logo"><img src="assets/img/UNIQ.webp" alt="UNIQ" /></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section contacts" id="contacts">
+    <div class="container">
+      <h2 class="section__title section__title--green fade-in-element">НАПИШИТЕ НАМ</h2>
+      <p class="contacts__subtitle fade-in-element">Введите свои данные, и мы вам перезвоним</p>
+
+      <div class="contacts__inner">
+
+        <form class="form fade-in-element" id="contactForm" novalidate>
+          <div class="form__field">
+            <label class="form__label" for="email">Почта</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="ivan@mail.com"
+              autocomplete="email" />
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Иван Иванов"
+              autocomplete="name" />
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="phone">Телефон</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99"
+              autocomplete="tel" />
+          </div>
+          <button type="submit" class="btn btn--mustard btn--mustard-full">Отправить заявку</button>
+        </form>
+
+        <div class="contacts__info fade-in-element">
+          <p class="contacts__info-title">СВЯЖИТЕСЬ С НАМИ</p>
+
+          <div class="contact-item">
+            <span class="contact-item__icon" aria-hidden="true">
+              <img src="assets/img/mail_icon.png" alt="" />
+            </span>
+            <span class="contact-item__text">crew@gegencrew.ru</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__icon" aria-hidden="true">
+              <img src="assets/img/phone_icon.png" alt="" />
+            </span>
+            <span class="contact-item__text">+7 (960) 345-34-56</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__icon" aria-hidden="true">
+              <img src="assets/img/telegram_icon.png" alt="" />
+            </span>
+            <span class="contact-item__text">Telegram-канал: @gegencrew</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <a href="#" class="logo footer__logo" aria-label="GEGENCREW">
+          <span class="logo__gegen">GEGEN</span><span class="logo__crew">CREW</span>
+        </a>
+
+        <p class="footer__copy">© 2025 GEGENCREW. Все права защищены.</p>
+
+        <div class="footer__socials">
+          <a href="mailto:crew@gegencrew.ru" class="footer__social-link" aria-label="Email">
+            <img src="assets/img/mail_icon.png" alt="Email" />
+          </a>
+          <a href="https://t.me/gegencrew" class="footer__social-link" aria-label="Telegram">
+            <img src="assets/img/telegram_icon.png" alt="Telegram" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    'use strict';
+
+    (function initHeader() {
+      const header = document.getElementById('header');
+      if (!header) return;
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    })();
+
+
+    (function initBurger() {
+      const burger = document.getElementById('burger');
+      const mobileNav = document.getElementById('mobileNav');
+      if (!burger || !mobileNav) return;
+
+      burger.addEventListener('click', () => {
+        const isOpen = burger.classList.toggle('open');
+        mobileNav.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      mobileNav.querySelectorAll('.nav__link').forEach((link) => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('open');
+          mobileNav.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+
+    (function initFadeIn() {
+      const elements = document.querySelectorAll('.fade-in-element');
+      if (!elements.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    })();
+
+
+    (function initCounters() {
+      const statsSection = document.getElementById('statsSection');
+      if (!statsSection) return;
+
+      const DURATION = 1500;
+
+      function animateCounter(el, target) {
+        const start = performance.now();
+
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / DURATION, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(eased * target);
+          el.textContent = current + (el.dataset.suffix || '');
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      let triggered = false;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !triggered) {
+              triggered = true;
+              const counters = statsSection.querySelectorAll('.stat__number[data-target]');
+              counters.forEach((counter) => {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                animateCounter(counter, target);
+              });
+              observer.unobserve(statsSection);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(statsSection);
+    })();
+
+
+    (function initForm() {
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Спасибо! Мы скоро свяжемся с вами.');
+        form.reset();
+      });
+    })();
+
+  </script>
+
+</body>
+
+</html>
